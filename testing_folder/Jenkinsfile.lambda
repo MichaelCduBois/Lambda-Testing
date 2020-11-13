@@ -1,0 +1,11 @@
+pipeline {
+    stages {
+        stage('First stage') {
+            steps {
+                dir('testing_folder') {
+                    sh "ls -al"
+                }
+            }
+        }
+    }
+}
