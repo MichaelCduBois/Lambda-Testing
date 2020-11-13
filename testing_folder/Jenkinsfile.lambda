@@ -1,11 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('First stage') {
+        stage('First Stage') {
             steps {
                 dir('testing_folder') {
                     sh "ls -al"
                 }
+            }
+        }
+        stage('Second Stage') {
+            steps {
+                echo "All Stages Complete"
             }
         }
     }
