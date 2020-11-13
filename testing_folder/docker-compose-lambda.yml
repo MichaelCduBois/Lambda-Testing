@@ -1,0 +1,6 @@
+version: "3"
+services:
+  awscli:
+    container_name: awscli
+    image: amazon/aws-cli:latest
+    command: ls -al
