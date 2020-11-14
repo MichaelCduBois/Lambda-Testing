@@ -4,14 +4,14 @@ pipeline {
         stage('Docker: Build') {
             steps {
                 dir('testing_folder') {
-                    sh "docker-compose -f docker-compose-lambda.yml up --build"
+                    sh 'docker-compose -f docker-compose-lambda.yml up --build'
                 }
             }
         }
         stage('Docker: Quit') {
             steps {
                 dir('testing_folder') {
-                    sh "docker-compose down"
+                    sh 'docker-compose down'
                 }
             }
         }
